@@ -1,6 +1,5 @@
 #pragma once
 
-#include "element.h"
 #include "card.h"
 
 class egg	

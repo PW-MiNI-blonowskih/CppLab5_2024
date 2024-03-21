@@ -9,7 +9,6 @@ card::card(int m, const element& el) : tab{ m, el }
 	h = new (std::nothrow) history(*this);
 }
 
-
 void card::draw(const pattern& s)
 {
 	s.draw(*this);

@@ -145,6 +145,9 @@
   <ItemGroup>
     <None Include="lab_5.pdf" />
   </ItemGroup>
+  <ItemGroup>
+    <Image Include="class_diagram.png" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

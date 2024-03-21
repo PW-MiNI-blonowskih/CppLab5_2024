@@ -1,7 +1,5 @@
 #include <iostream>
 #include "tab.h"
-#include "element.h"
-
 
 void tab::init(int m)
 {

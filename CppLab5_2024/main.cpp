@@ -2,9 +2,7 @@
 using namespace std;
 #include <ctime>
 
-#include "card.h"
 #include "egg.h"
-
 
 int main()
 {

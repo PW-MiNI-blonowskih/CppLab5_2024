@@ -57,4 +57,9 @@
   <ItemGroup>
     <None Include="lab_5.pdf" />
   </ItemGroup>
+  <ItemGroup>
+    <Image Include="class_diagram.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
 </Project>
