@@ -6,7 +6,7 @@
 
 
 
-card::card(int m, const element& el)
+card::card(int m, const element& el) : tab{ m, el }
 {
 	//TODO
 

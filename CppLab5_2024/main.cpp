@@ -1,11 +1,9 @@
-			
 #include <iostream>
 using namespace std;
 #include <ctime>
 
 #include "card.h"
-#include "pattern.h"
-#include "element.h"
+#include "egg.h"
 
 
 int main()
@@ -32,7 +30,7 @@ int main()
                 switch (w)
                 {
 					case 1:
-						for (int i = 0; i < c.size() / 5; i++) // kilka szlaczków w ustalonym kolorze
+						for (int i = 0; i < c.size() / 5; i++) // kilka szlaczkï¿½w w ustalonym kolorze
 							c.draw(pattern(rand() % c.size(), element(pen, 'O')));
 
 						pen--;
@@ -42,7 +40,7 @@ int main()
 						
 						break;
                    
-					case 2: // nowa kartka (byæ mo¿e z nowym rozmiarem)
+					case 2: // nowa kartka (byï¿½ moï¿½e z nowym rozmiarem)
 						{
 							int m;
 

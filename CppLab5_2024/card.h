@@ -1,6 +1,9 @@
 #pragma once
 
+#include "history.h"
+#include "pattern.h"
 
+class egg;
 
 class card: public tab
 {
@@ -25,6 +28,6 @@ public:
 	void undo();			//etap 3
 	
 	
-	//8-szary,9-niebieski,10-zielony,11-trukusowy,12-czerwony,13-fioletowy,14-¿ó³ty
+	//8-szary,9-niebieski,10-zielony,11-trukusowy,12-czerwony,13-fioletowy,14-ï¿½ï¿½ty
 	enum colors {DARK_GREEN=2, LIGHT_GRAY=7, GRAY, BLUE, GREEN, TURKOIS, RED, PURPLE, YELLOW};
 };

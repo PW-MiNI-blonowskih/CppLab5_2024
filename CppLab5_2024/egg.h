@@ -1,13 +1,14 @@
 #pragma once
 
-
+#include "element.h"
+#include "card.h"
 
 class egg	
 {	
-	element el;		// element u¿yty do malowania obszaru POZA jajem
+	element el;		// element uï¿½yty do malowania obszaru POZA jajem
 
 public:
-	egg(const element& el = element{card::LIGHT_GRAY, '*'});
+	egg(const element& el = element{card::colors::LIGHT_GRAY, '*'});
 
 	void draw(card& c) const;	// "zamalowuje" obszar POZA jajem
 };

@@ -1,6 +1,4 @@
-
 #include <iostream>
-//using namespace std;
 #include "tab.h"
 #include "element.h"
 
@@ -69,7 +67,12 @@ tab::~tab()
 
 std::ostream& operator<<(std::ostream& out, const tab& t)
 {
-	//TODO
+	for (int i = 0; i < t.m; ++i) {
+		for (int j = 0; j < t.m; ++j) {
+			out << t(i, j);
+		}
+		out << std::endl;
+	}
 
 	return out;
 }

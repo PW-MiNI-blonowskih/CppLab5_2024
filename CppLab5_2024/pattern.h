@@ -1,9 +1,12 @@
 #pragma once
 
+#include "element.h"
+
+class card;
 
 class pattern {
-	int sx;		// wspó³rzêdne œrodka szlaczka (0 <= sx <m)
-	element el;	// element u¿yty do rysowania szlaczka
+	int sx;		// wspï¿½rzï¿½dne ï¿½rodka szlaczka (0 <= sx <m)
+	element el;	// element uï¿½yty do rysowania szlaczka
 
 public:
 	pattern(int sx, const element& el);
