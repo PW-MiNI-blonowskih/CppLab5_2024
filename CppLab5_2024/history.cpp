@@ -1,45 +1,49 @@
-
-
-
 #include "history.h"
 
-
-
-
-history::history(const tab& picture)
+history::history(const tab& picture) : n{ 1 }
 {
-	//TODO
-	
-
-
+	h[0] = new (std::nothrow) tab(picture);
 }
 	
 void history::write(const tab& picture)
 {
-	//TODO
-
-	
+	if (n < N) {
+		h[n] = new (std::nothrow) tab(picture);
+		++n;
+	}
+	else {
+		for (int i = 0; i < N - 1; ++i) {
+			h[i] = h[i + 1];
+		}
+		h[n - 1] = new (std::nothrow) tab(picture);
+	}
 }
 		
 tab history::undo()
 {
-	//TODO
-
-
-	return tab();	//POPRAW TO !!!
+	if (n == 1) {
+		return *(h[0]);
+	} 
+	else {
+		--n;
+		h[n] = nullptr;
+		return *(h[n - 1]);
+	}
 }
 
 void history::clear()
 {
-	//TODO
-
+	h[0] = h[n - 1];
+	n = 1;
+	for (int i = 1; i < N; ++i) {
+		h[i] = nullptr;
+	}
 
 }
 
 history::~history()
 {
-	//TODO
-
-
-
+	for (int i = 0; i < N; ++i) {
+		delete h[i];
+	}
 }

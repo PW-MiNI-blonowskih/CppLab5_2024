@@ -16,6 +16,9 @@ private: //wszystko prywatne (ale dost�pne dla klasy card)
 
 	//TODO
 	//zdefiniuj zabroniony: konstruktor bezparametrowy, kopiowanie, operator=
+	history() = delete;
+	history(const history& h) = delete;
+	history& operator=(const history& h) = delete;
 
 
 	void write(const tab& picture);	// na koniec tablicy wstawiamy bie��cy obrazek, 
