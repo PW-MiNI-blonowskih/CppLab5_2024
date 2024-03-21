@@ -1,38 +1,30 @@
-
-
-
 #include "card.h"
+#include "egg.h"
 
-
-
-
-card::card(int m, const element& el) : tab{ m, el }
+card::card(int m, const element& el) : tab{ m, el }, h{ nullptr }
 {
-	//TODO
-
-
-
+	egg e{};
+	draw(e);
 }
 
 
 void card::draw(const pattern& s)
 {
-	//TODO
-
-
+	s.draw(*this);
+	egg e{};
+	draw(e);
 }
 
 void card::draw(const egg& e)
 {
-	//TODO
-
-
+	e.draw(*this);
 }
 
 void card::reset(int m, const element& el)
 {
-	//TODO
-
+	destroy();
+	init(m);
+	fill(el);
 }
 
 void card::write() const

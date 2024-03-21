@@ -14,7 +14,9 @@ public:
 
 	//TODO
 	//zdefiniuj zabroniony: konstruktor bezparametrowy, kopiowanie, operator=
-	
+	card() = delete;
+	card(card& k) = delete;
+	card& operator=(const card& a) = delete;
 
 	~card();
 	
