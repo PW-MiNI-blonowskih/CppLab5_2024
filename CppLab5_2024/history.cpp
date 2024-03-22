@@ -26,7 +26,7 @@ tab history::undo()
 	} 
 	else {
 		--n;
-		h[n] = nullptr; // XD
+		delete h[n];
 		return *(h[n - 1]);
 	}
 }
@@ -36,7 +36,7 @@ void history::clear()
 	h[0] = h[n - 1];
 	n = 1;
 	for (int i = 1; i < N; ++i) {
-		h[i] = nullptr; // XD
+		delete h[i];
 	}
 
 }

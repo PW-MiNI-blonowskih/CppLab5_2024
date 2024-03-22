@@ -37,17 +37,7 @@ void card::write() const
 
 void card::undo()
 {
-	tab temp = h->undo();
-
-	if (temp.size() != size()) {
-		reset(temp.size());
-	}
-
-	for (int i = 0; i < size(); ++i) {
-		for (int j = 0; j < size(); ++j) {
-			(*this)(i, j) = temp(i, j);
-		}
-	}
+	static_cast<tab&>(*this) = h->undo();
 }
 
 card::~card()
