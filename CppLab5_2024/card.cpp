@@ -12,8 +12,7 @@ card::card(int m, const element& el) : tab{ m, el }
 void card::draw(const pattern& s)
 {
 	s.draw(*this);
-	egg e{};
-	draw(e);
+	draw(egg());
 }
 
 void card::draw(const egg& e)
@@ -24,10 +23,8 @@ void card::draw(const egg& e)
 void card::reset(int m, const element& el)
 {
 	destroy();
-	init(m);
-	fill(el);
-	egg e{};
-	draw(e);
+	static_cast<tab&>(*this) = tab(m, el);
+	draw(egg());
 }
 
 void card::write() const
